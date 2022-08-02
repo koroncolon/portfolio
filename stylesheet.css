@@ -1,0 +1,329 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+
+
+/* ========================================
+    全体設定
+========================================= */
+html{
+	font-size: 62.5%; /* =10px =1rem */
+	scroll-behavior: smooth;
+}
+
+body {
+	color:#494a4b;
+	font-size: 1.6rem;/* =16px */
+	line-height: 1.4em;/* =22.4px */
+	font-family: "Yu Gothic UI", "游ゴシック", "YuGothic", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a{
+	text-decoration: none;
+	color: #494a4b;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+
+/* ========================================
+    ヘッダー＆メイン
+========================================= */
+main{
+	background: url(main.jpg) center bottom/cover;
+	width: 100%;
+	height: 70rem;/* =700px */
+	color: #fff;
+	position: relative;
+}
+nav{
+	position:absolute;
+	top:2em;/* =32px */ 
+	right: 2em;
+}
+nav a{
+	font-size: 2.4rem;/* =24px */
+	color: #fff;
+	margin-left: 7rem;/* =70px */
+	letter-spacing: 0.2em;/* =4.8px */
+}
+nav a:hover{
+	border-bottom: 0.2rem solid #fff;
+}
+main h1{
+	font-size: 6rem;/* =60px */
+	line-height: 8rem;
+	letter-spacing: 0.3em;/* =18px */
+	position: absolute;
+	top: 25%;
+	left: 3.2rem;/* =32px */
+}
+
+/* ========================================
+    インナー
+========================================= */
+#inner{
+	padding: 0 8rem;
+}
+
+h2{
+	font-size: 3.2rem;
+	letter-spacing: 0.2em;
+	text-align: center;
+	margin-bottom: 8rem;/* = 80px*/
+}
+
+.box{
+	padding-top: 8em;/* =128px */
+	opacity: 0;
+	transform: translate(0, 10rem); /* フェードインで動く高さを指定 */
+    transition: all 2000ms; /* フェードインにかかる時間を指定 */
+}
+
+.effect-scroll {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ========================================
+    about
+========================================= */
+#about h2{
+	color: #7EB5FE;
+}
+#about img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+#shadow{
+	position: relative;
+	width: 25vw;
+	height: 25vw;
+}
+#shadow::after{
+	position: absolute;
+	content: '';
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-shadow: inset 0 0 1rem #fff,
+				inset 0 0 1rem #fff,
+				inset 0 0 1rem #fff;
+	border-radius: 50%;
+}
+#about-inner{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#intro{
+	width: 60%;
+}
+
+#intro p{
+	margin-bottom: 2em;
+}
+#intro p:nth-child(1){
+	font-size: 2rem;
+	margin-bottom: 1em;
+}
+#intro p:nth-child(2){
+	font-size: 2rem;
+}
+#intro span{
+	font-size: 1.6rem;
+}
+
+/* ========================================
+    designs
+========================================= */
+#designs h2{
+	color: #FD9ED2;
+}
+#design-grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+	gap: 7rem;
+}
+#designs img{
+	width: 100%;
+	border: 0.1rem solid #A6A5A0;
+}
+.design-box p{
+	text-align: center;
+}
+.design-box:hover{
+	cursor: pointer;
+}
+
+/* ========================================
+    designpage
+========================================= */
+.designpage{
+	display: none;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	position: fixed;
+	background-color:rgba(96,81,86,0.8);
+	padding: 5% 10%;
+}
+.designpage-box{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	overflow-y: scroll;
+	background-color: #fff;
+	position: relative;
+	padding: 5rem 20rem;
+}
+.close p{
+	font-size: 4rem;
+	position: absolute;
+	top: 1rem;
+	right: 1.2rem;
+}
+.close:hover{
+	cursor: pointer;
+}
+.designpage h3{
+	text-align: center;
+	font-size: 2rem;
+	letter-spacing: 0.2em;
+	margin-bottom: 2rem;
+}
+.designpage h4{
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+.designpage p{
+	margin:0 1rem 2rem 1rem;
+}
+.designpage a{
+	background-color:#7EB5FE;
+	color: #fff;
+	text-align: center;
+	padding: 0.5em 1em;
+	letter-spacing: 0.2em;
+}
+.linkbtn{
+	text-align: center;
+	margin-top: 0.5em;
+}
+.image{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	margin-bottom: 4rem;
+}
+.image img{
+	width: 50%;
+	height: 50%;
+}
+.image img[alt="PC画面"]{
+	width: 40vw;
+}
+.image img[alt="スマホ画面"]{
+	width: 10vw;
+}
+
+/* ========================================
+    skills
+========================================= */
+#skills h2{
+	color: #7EB5FE;
+}
+#skill-grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+	gap: 10rem;
+	padding: 0 10%;
+}
+#skills img{
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+}
+#skills img:last-child{
+	width: 100%;
+	padding-top: 10rem;
+}
+.skill-box h3{
+	font-size: 2rem;
+	text-align: center;
+	margin: 1em;
+}
+.skill-box p{
+	display: block;
+	margin: 0 auto;	
+}
+
+/* ========================================
+    footer
+========================================= */
+footer{
+	margin-top: 8rem;
+	width:100%;
+	height: auto;
+	padding: 1.2rem 0;
+	background-color:#FD9ED2;
+}
+footer small{
+	color: #fff;
+	display: block;
+	text-align: center;
+}
