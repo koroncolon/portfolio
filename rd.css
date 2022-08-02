@@ -1,0 +1,23 @@
+@media(max-width:1024px){
+	html{
+		font-size: 50%;
+	}
+}
+
+@media(max-width:768px){
+	html{
+		font-size: 45%;
+	}
+
+	#about-inner{
+		display: block;
+	}
+	#shadow{
+		width: 60vw;
+		height: 60vw;
+		margin: 0 auto 7rem auto;
+	}
+	#intro{
+		width: 100%;
+	}
+}
