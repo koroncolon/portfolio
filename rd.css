@@ -20,4 +20,17 @@
 	#intro{
 		width: 100%;
 	}
+
+	.hb{
+	display: block;
+	}
+	#nav{
+		display: none;
+	}
+
+	main h1{
+	font-size: 8vw;
+	line-height: 8vw;
+	top: 32%;
+}
 }
