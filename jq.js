@@ -6,6 +6,9 @@ $(function(){
  });
   $('.design-box').eq(1).click(function(){
  	$('.designpage').eq(1).fadeIn();
+ }); 
+  $('.design-box').eq(2).click(function(){
+ 	$('.designpage').eq(2).fadeIn();
  });
 
  $('.close').click(function(){
@@ -27,4 +30,27 @@ $(function(){
 	  });
 	jQuery(window).scroll();
 
+});
+
+$(function(){
+    $('.hb-icon').click(function(){
+    if($('.hb-nav').hasClass('open')){
+      $('.hb-nav').removeClass('open');
+      $(this).removeClass('open');
+      $('html').removeClass('scroll-prevent');
+    }else{
+      $('.hb-nav').addClass('open');
+      $(this).addClass('open');
+      $('html').addClass('scroll-prevent')
+    }
+	});
+});
+
+$(function(){
+	$('.hb-nav a').click(function(){
+      $('.hb-nav').removeClass('open');
+      $(this).removeClass('open');
+      $('html').removeClass('scroll-prevent');
+      $('.hb-icon').removeClass('open');
+	});
 });
