@@ -97,7 +97,7 @@ nav a{
 	letter-spacing: 0.2em;/* =4.8px */
 }
 nav a:hover{
-	border-bottom: 0.2rem solid #fff;
+	border-bottom: 0.1rem solid #fff;
 }
 main h1{
 	font-size: 6rem;/* =60px */
@@ -107,6 +107,100 @@ main h1{
 	top: 25%;
 	left: 3.2rem;/* =32px */
 }
+
+/* ========================================
+    ハンバーガーメニュー
+========================================= */
+
+.hb{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 2rem;
+	padding-right: 1rem;
+	overflow: hidden;
+}
+.hb-icon{
+	display: flex;
+ 	align-items: center;
+	width: 5rem;
+	height: 5rem;
+	cursor: pointer;
+	z-index: 10;
+	position: absolute;
+	right: 2rem;
+	background-color: #fff;
+	border-radius: 1rem;
+}
+.hb-line{
+	display: block;
+	width: 70%;
+	height: 0.4rem;
+	border-radius: 4px;
+	background-color:#FD9ED2 ;
+	position: relative;
+	transition: all 0.5s;
+	margin: 0 auto;
+}
+.hb-line::before,
+.hb-line::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height:0.4rem; 
+  border-radius: 4px;
+  background-color: #FD9ED2;
+  position: absolute;
+  transition: all 0.5s;
+}
+.hb-line::before{
+  transform: translateY(-1rem);
+}
+.hb-line::after{
+  transform: translateY(1rem);
+}
+
+.hb-icon.open .hb-line{
+  background-color: transparent;
+}
+.hb-icon.open .hb-line::before{
+  transform: rotate(45deg);
+}
+.hb-icon.open .hb-line::after{
+  transform: rotate(-45deg);
+}
+
+.hb-nav{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: -200rem;
+	transition: right 0.5s;	
+	padding-top: 12rem;
+  	background-color: rgba(80,129,179,0.9);
+  	z-index: 5;
+} 
+.hb-nav.open{
+  right: 0;
+}
+
+.hb-nav ul{
+	width: 100%;
+	text-align: center;
+}
+.hb-nav li{
+	margin-bottom: 6rem;
+}
+.hb-nav a{
+	border: none;
+	font-size: 3.2rem;
+}
+.hb-nav a:hover{
+	border-bottom: 0.2rem solid #fff;
+}
+
 
 /* ========================================
     インナー
