@@ -2,15 +2,16 @@ $(function(){
 
  //デザインのモーダル
  $('.design-box').eq(0).click(function(){
- 	$('.designpage').eq(0).fadeIn();
+ 	$('.designpage').eq(0).fadeIn().css('display','flex');
  });
   $('.design-box').eq(1).click(function(){
- 	$('.designpage').eq(1).fadeIn();
+ 	$('.designpage').eq(1).fadeIn().css('display','flex');
  }); 
   $('.design-box').eq(2).click(function(){
- 	$('.designpage').eq(2).fadeIn();
+ 	$('.designpage').eq(2).fadeIn().css('display','flex');
  });
 
+ 
  $('.close').click(function(){
  	$('.designpage').fadeOut();
 
@@ -32,25 +33,3 @@ $(function(){
 
 });
 
-$(function(){
-    $('.hb-icon').click(function(){
-    if($('.hb-nav').hasClass('open')){
-      $('.hb-nav').removeClass('open');
-      $(this).removeClass('open');
-      $('html').removeClass('scroll-prevent');
-    }else{
-      $('.hb-nav').addClass('open');
-      $(this).addClass('open');
-      $('html').addClass('scroll-prevent')
-    }
-	});
-});
-
-$(function(){
-	$('.hb-nav a').click(function(){
-      $('.hb-nav').removeClass('open');
-      $(this).removeClass('open');
-      $('html').removeClass('scroll-prevent');
-      $('.hb-icon').removeClass('open');
-	});
-});
