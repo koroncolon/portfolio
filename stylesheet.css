@@ -319,7 +319,6 @@ h2{
 	width: 80vw;
 	height: 80vh;
 	margin: 10vh auto;
-	overflow-x: hidden;
 	overflow-y: auto;
 	background-color: #fff;
 	position: relative;
@@ -335,14 +334,12 @@ h2{
 	cursor: pointer;
 }
 .designpage h3{
-	width: 100%;
 	text-align: center;
 	font-size: 2rem;
 	letter-spacing: 0.2em;
 	margin-bottom: 2rem;
 }
 .designpage h4{
-	width: 100%;
 	font-size: 1.8rem;
 	font-weight: bold;
 	margin-bottom: 0.5rem;
@@ -351,7 +348,6 @@ h2{
 	margin:0 1rem 2rem 1rem;
 }
 .designpage a{
-	width: 100%;
 	background-color:#7EB5FE;
 	color: #fff;
 	text-align: center;
@@ -364,7 +360,12 @@ h2{
 	border: 0.2rem solid #7EB5FE;
 	padding: 0.375em 0.85em;
 }
+.comment{
+	width: 100%;
+}
+
 .linkbtn{
+	width:100%;
 	text-align: center;
 	margin-top: 0.5em;
 }
