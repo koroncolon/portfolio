@@ -375,10 +375,6 @@ h2{
 	justify-content: center;
 	margin-bottom: 4rem;
 }
-.image img{
-	width: 50%;
-	height: 50%;
-}
 .image img[alt="PC画面"]{
 	width: 40vw;
 }
