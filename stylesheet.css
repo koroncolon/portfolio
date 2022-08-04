@@ -317,10 +317,10 @@ h2{
 	padding: 5% 10%;
 }
 .designpage-box{
-	width: 100%;
+	width: auto;
 	height: 100%;
 	position: fixed;
-	overflow-y: scroll;
+	overflow-y: auto;
 	background-color: #fff;
 	position: relative;
 	padding: 5em 10em;
