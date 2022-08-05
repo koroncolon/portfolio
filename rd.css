@@ -8,7 +8,6 @@
 	html{
 		font-size: 45%;
 	}
-
 	#about-inner{
 		display: block;
 	}
@@ -32,7 +31,8 @@
 	font-size: 8vw;
 	line-height: 10vw;
 	top: 32%;
-	
+	}
+
 	.designpage-box{
 		padding: 5em 2em;
 	}
