@@ -10,7 +10,15 @@ $(function(){
   $('.design-box').eq(2).click(function(){
  	$('.designpage').eq(2).fadeIn().css('display','flex');
  });
-
+$('.design-box').eq(3).click(function(){
+ 	$('.designpage').eq(3).fadeIn().css('display','flex');
+ });
+  $('.design-box').eq(4).click(function(){
+ 	$('.designpage').eq(4).fadeIn().css('display','flex');
+ });
+  $('.design-box').eq(5).click(function(){
+ 	$('.designpage').eq(5).fadeIn().css('display','flex');
+ });
  
  $('.close').click(function(){
  	$('.designpage').fadeOut();
