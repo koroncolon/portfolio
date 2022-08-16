@@ -375,6 +375,9 @@ h2{
 	text-align: center;
 	margin-top: 7rem;
 }
+#btn_flex{
+	display: flex;
+}
 
 .image{
 	display: flex;
@@ -387,6 +390,12 @@ h2{
 }
 .image img[alt="スマホ画面"]{
 	width: 10vw;
+}
+.image img[alt="名刺裏"]{
+	width: 30vw;
+}
+.image img[alt="名刺表"]{
+	width: 15vw;
 }
 
 /* ========================================
