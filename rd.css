@@ -36,5 +36,9 @@
 	.designpage-box{
 		padding: 5em 2em;
 	}
+	
+	#btn_flex{
+	display: block;
+}
 
 }
