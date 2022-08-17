@@ -39,6 +39,10 @@
 	
 	#btn_flex{
 	display: block;
-}
+	}
+	#btn_flex .linkbtn:nth-child(2){
+		margin-top: 2rem;
+	}
+	
 
 }
